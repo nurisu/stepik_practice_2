@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Добавление заметок</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="parent">
+            <form method="POST" action="">
+                <h2>Добавление заметок</h2>
+                <label>Текст:</label>
+                <input type="text" name="my-note" id="my-note" class="txt" required>
+                <br>
+                <input type="submit" value="Добавить" class="btn">
+                {% csrf_token %}
+            </form>
+        </div>
+    </body>
+</html>

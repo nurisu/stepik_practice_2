@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Заметки</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+    <div class="parent">
+        <div class="frame">
+            <h1>{{ username }}</h1>
+        </div>
+    </div>
+    {% for note in notes %}
+    <div class="parent">
+        <div class="frame">
+            <p class="my-note">{{ note }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    </body>
+</html>

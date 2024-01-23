@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Вход</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="parent">
+            <form method="POST" action="">
+                <h2>Вход</h2>
+                <label>Логин:</label>
+                <br>
+                <input type="text" name="username" id="username" class="txt" required>
+                <br>
+                <label>Пароль:</label>
+                <br>
+                <input type="password" name="password" id="password" class="txt" required>
+                <br>
+                <input type="submit" value="Войти" class="btn">
+                {% csrf_token %}
+            </form>
+        </div>
+    </body>
+</html>
